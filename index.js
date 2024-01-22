@@ -5,8 +5,26 @@ const server = express()
 
 server.use(express.json())
 
+let users = [
+    {
+      id: 1,
+      name: 'Sean Kelly',
+      age: 29,
+    },
+    {
+      id: 2,
+      name: 'Matt Barnes',
+      age: 42,
+    },
+    {
+      id: 3,
+      name: 'Kylie Rhodes',
+      age: 21,
+    }
+  ];
+
 server.get('/api/users', (req, res) => {
-    
+    res.status(200).json(users)
 })
 
 
