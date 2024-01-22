@@ -10,7 +10,7 @@ Your assignment page on Canvas should contain instructions for submitting this p
 
 ### Task 2: Minimum Viable Product
 
-- [ ] Build a simple API:
+- [] Build a simple API:
 
   - Create a `.gitignore` file executing `npx gitignore node`
   - Create a `package.json` file executing `npm init --y`
@@ -23,7 +23,7 @@ Your assignment page on Canvas should contain instructions for submitting this p
     | Method | URL           | Description                                                                                         |
     | ------ | ------------- | ----------------------------------------------------------------------------------------------      |
     | GET    | /api/users    | Returns an array users.                                                                             |
-    | POST   | /api/register | Creates a user from { username, password } in the `request body`, responds with newly created user. |
+    | POST   | /api/register | Creates a user from { username, password } in the `request body`, responds with newly created user.
     | POST   | /api/login    | Checks { username, password } in the `request body`, responds with a welcome message.               |
 
 - [ ] **OPTIONALLY** deploy your app to [Heroku](https://heroku.com). The link to the repo on Github is your actual submission deliverable.
