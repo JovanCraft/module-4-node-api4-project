@@ -27,6 +27,21 @@ server.get('/api/users', (req, res) => {
     res.status(200).json(users)
 })
 
+let nextId = 4;
+
+
+server.post('/api/register', (req, res) => {
+    console.log(req.body)
+
+  const user = req.body;
+  user.id = nextId++;
+
+  users.push(user);
+
+  res.status(201).json(user);
+});
+
+
 
 const port = env.PORT || 9000
 
