@@ -7,19 +7,19 @@ server.use(express.json())
 
 let users = [
     {
-      id: 1,
+
       name: 'Sean Kelly',
-      age: 29,
+      password: generatePass(),
     },
     {
-      id: 2,
+
       name: 'Matt Barnes',
-      age: 42,
+      password: generatePass(),
     },
     {
-      id: 3,
+
       name: 'Kylie Rhodes',
-      age: 21,
+      password: generatePass(),
     }
   ];
 
@@ -27,20 +27,24 @@ server.get('/api/users', (req, res) => {
     res.status(200).json(users)
 })
 
-let nextId = 4;
-
+function generatePass(){
+ return Math.floor(Math.random() * 90000 + 10000)
+}
 
 server.post('/api/register', (req, res) => {
-    console.log(req.body)
+    //console.log(req.body)
 
   const user = req.body;
-  user.id = nextId++;
+  user.password = generatePass();
 
   users.push(user);
 
   res.status(201).json(user);
 });
 
+server.post('/api/login', (req, res) => {
+
+})
 
 
 const port = env.PORT || 9000
